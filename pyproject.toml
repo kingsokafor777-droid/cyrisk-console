@@ -1,0 +1,51 @@
+[build-system]
+requires = ["hatchling>=1.25,<2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "cyrisk-console"
+version = "0.1.0"
+description = "FastAPI reference boundary and static workbench shell for supplied Cyrisk records."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Apache-2.0" }
+authors = [{ name = "Kingsley Okafor" }]
+classifiers = ["Development Status :: 3 - Alpha", "License :: OSI Approved :: Apache Software License", "Programming Language :: Python :: 3", "Programming Language :: Python :: 3 :: Only", "Programming Language :: Python :: 3.10", "Programming Language :: Python :: 3.11", "Programming Language :: Python :: 3.12", "Programming Language :: Python :: 3.13", "Typing :: Typed"]
+dependencies = ["cyrisk-core>=0.1,<0.2", "fastapi>=0.115,<1", "pydantic>=2.7,<3", "uvicorn>=0.30,<1"]
+
+[project.scripts]
+cyrisk-console = "cyrisk_console.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/cyrisk_console"]
+artifacts = ["src/cyrisk_console/static/**"]
+
+[tool.pytest.ini_options]
+addopts = "--strict-config --strict-markers --cov=cyrisk_console --cov-branch --cov-report=term-missing --cov-fail-under=95"
+testpaths = ["tests"]
+
+[tool.coverage.run]
+branch = true
+source = ["cyrisk_console"]
+
+[tool.coverage.report]
+show_missing = true
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "C4", "SIM", "RUF"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "lf"
+
+[tool.mypy]
+python_version = "3.10"
+strict = true
+warn_unreachable = true
+show_error_codes = true
+pretty = true

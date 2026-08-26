@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cyrisk Console — Synthetic Reference</title>
+    <style>
+      :root { color-scheme: dark; --bg:#08111f; --panel:#0e1b2e; --line:#243652; --ink:#e8efff; --muted:#98a9c3; --accent:#4cc9b0; --warn:#f5be62; }
+      * { box-sizing: border-box; } body { margin:0; background:radial-gradient(circle at top right,#112b45,transparent 36rem),var(--bg); color:var(--ink); font:15px/1.5 ui-sans-serif,system-ui,sans-serif; }
+      main { max-width:1180px; margin:0 auto; padding:38px 24px 64px; } header { display:flex; gap:20px; justify-content:space-between; border-bottom:1px solid var(--line); padding-bottom:24px; }
+      .kicker { color:var(--accent); font-size:12px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; } h1 { margin:6px 0 0; font-size:34px; line-height:1.1; } .status { border:1px solid #2e715f; color:#a5ead8; border-radius:999px; padding:7px 12px; height:max-content; }
+      .notice { margin:24px 0; border-left:3px solid var(--warn); background:#1a1a18; padding:14px 16px; color:#f5e3bd; } .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+      .card { border:1px solid var(--line); background:linear-gradient(145deg,#102036,#0c1728); border-radius:12px; padding:18px; } .label { color:var(--muted); font-size:12px; text-transform:uppercase; letter-spacing:.08em; } .value { margin-top:8px; font-size:20px; font-weight:650; }
+      section { margin-top:28px; } .record { border:1px solid var(--line); background:var(--panel); border-radius:12px; padding:20px; } dl { display:grid; grid-template-columns:170px 1fr; gap:10px 20px; margin:0; } dt { color:var(--muted); } dd { margin:0; overflow-wrap:anywhere; } code { color:#a5ead8; }
+      footer { color:var(--muted); border-top:1px solid var(--line); margin-top:30px; padding-top:18px; font-size:13px; } @media(max-width:720px){header{display:block}.status{display:inline-block;margin-top:16px}.grid{grid-template-columns:1fr}dl{grid-template-columns:1fr;gap:4px 0}dd{margin-bottom:12px}}
+    </style>
+  </head>
+  <body>
+    <main>
+      <header><div><div class="kicker">Cyrisk Console · v0.1.0 reference</div><h1>Evidence-governed synthetic workbench</h1></div><div class="status">Read-only · synthetic tenant</div></header>
+      <div class="notice"><strong>Boundary:</strong> this packaged static shell is not authenticated and does not fetch live data. It illustrates the API/UI vocabulary only; it cannot approve, accept, remediate, or certify anything.</div>
+      <div class="grid"><div class="card"><div class="label">Tenant scope</div><div class="value">synthetic_tenant</div></div><div class="card"><div class="label">Review status</div><div class="value">Reviewed context</div></div><div class="card"><div class="label">Unit</div><div class="value">Synthetic index</div></div></div>
+      <section><div class="record"><div class="kicker">Fictional scenario record</div><h2>Fictional synthetic workbench scenario</h2><dl><dt>Scenario</dt><dd><code>scenario_console</code></dd><dt>Risk record</dt><dd><code>risk_console</code></dd><dt>Completeness</dt><dd>Partial — declared for fictional exercise only</dd><dt>Model reference</dt><dd><code>aaaaaaaa…aaaaaaaa</code></dd><dt>Limitation</dt><dd>No risk, loss, authority, decision, remediation, or real-world condition may be inferred.</dd></dl></div></section>
+      <footer>Production deployers own authenticated identity, tenant membership, API authorization, database/RLS enforcement, record provenance, retention, and all review or decision workflows.</footer>
+    </main>
+  </body>
+</html>

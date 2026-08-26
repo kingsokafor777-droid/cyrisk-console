@@ -1,0 +1,30 @@
+{
+  "boundaries": {
+    "identity_authenticated": false,
+    "live_database_connected": false,
+    "risk_decision_capability": false,
+    "schema_version": "cyrisk.console/v1",
+    "write_routes_present": false
+  },
+  "workbench": {
+    "limitation": "Synthetic read view only; it does not authenticate identity, validate authority, calculate risk, accept risk, approve a decision, verify remediation, or connect to a live system.",
+    "records": [
+      {
+        "asset_id": "asset_console",
+        "completeness_status": "partial",
+        "limitation": "Fictional metadata only; no risk, loss, decision, authority, or remediation conclusion may be inferred.",
+        "model_run_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "review_status": "reviewed",
+        "risk_id": "risk_console",
+        "scenario_hash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "scenario_id": "scenario_console",
+        "schema_version": "cyrisk.console/v1",
+        "tenant_id": "synthetic_tenant",
+        "title": "Fictional synthetic workbench scenario",
+        "unit": "synthetic-index-units"
+      }
+    ],
+    "schema_version": "cyrisk.console/v1",
+    "tenant_id": "synthetic_tenant"
+  }
+}
